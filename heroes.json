@@ -23,6 +23,12 @@
       "description": "All",
       "element": "earth",
       "id": "f59a0e56-19d1-4860-86b3-1ff6b050cf76"
+    },
+    {
+      "name": "не",
+      "description": "уеркнор",
+      "element": "wind",
+      "id": "1873c338-446b-4291-825f-0d92b16faa99"
     }
   ],
   "filters": [

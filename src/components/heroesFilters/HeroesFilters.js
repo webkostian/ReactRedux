@@ -4,13 +4,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import classNames from 'classnames';
 
 import { filtersChanged, fetchFilters, selectAll } from './filtersSlice';
-import store from '../../store';
 import Spinner from '../spinner/Spinner';
+//import store from '../../store';
 
 const HeroesFilters = () => {
 
     const {filtersLoadingStatus, activeFilter} = useSelector(state => state.filters);
-    const filters = selectAll(store.getState());
+    // Получаем массив фильтров
+    // Способ 1
+    const filters = useSelector(selectAll);     
+    // Способ 2   
+    //const filters = selectAll(store.getState());
     const dispatch = useDispatch();
     const {request} = useHttp();
 
