@@ -5,7 +5,7 @@ import {
 } from "@reduxjs/toolkit";
 import { useHttp } from "../../hooks/http.hook";
 
-const filtersAdapter = createEntityAdapter();
+const filtersAdapter = createEntityAdapter({selectId: (filters) => filters.name});
 const initialState = filtersAdapter.getInitialState({
   heroesLoadingStatus: "idle",
   activeFilter: "all",
